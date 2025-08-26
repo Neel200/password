@@ -195,4 +195,48 @@ body{
     background: linear-gradient(90deg, #7a00c7, #cc00a7);
     color: #fff;
     border-bottom: 4px solid #ffeb3b;
+
+}
+@media (max-width:600px){
+    .container{
+        width: 90%;
+        padding: 1rem;
+    }
+    .container h1{
+        font-size: 1.6rem;
+        letter-spacing: 1px;
+    }
+    .password{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.8rem;
+    }
+    .password input{
+        font-size: 1rem;
+        text-align: center;
+    }
+    .password button{
+        align-self: center;
+    }
+    .input{
+        padding: 1rem;
+    }
+    .input .text{
+        font-size: 0.9rem;
+        flex-direction: column;
+        gap: 0.3rem;
+        text-align: left;
+    }
+    .input div label{
+        font-size: 0.95rem;
+    }
+    .strength{
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    .Button{
+        font-size: 1rem;
+        padding: 0.9rem;
+    }
 }
