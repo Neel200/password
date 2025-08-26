@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #2a0845, #6441a5);
+    gap: 1.5rem;
+}
+.container h1{
+    margin-bottom: 0.5rem;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fefdf9;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.container{
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    width: 500px;
+    box-shadow: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.password{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1b082e;
+    border-radius: 1rem;
+    padding: 1.2rem;
+    border-bottom: 4px solid #a020f0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+.password input{
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #ffeb3b;
+    font-size: 1.2rem;
+    width: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.password button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+[data-copyMsg]{
+    position: absolute;
+    top: -30px;
+    right: 10px;
+    background: #ff00cc;
+    color: #fff;
+    font-size: 0.85rem;
+    padding: 5px 12px;
+    border-radius: 6px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(-10px);
+    white-space: nowrap;
+}
+[data-copyMsg].active{
+    opacity: 1;
+    transform: translateY(0);
+}
+[data-copyMsg]::after{
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    right: 12px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #ff00cc transparent transparent transparent;
+}
+.input{
+    background: #1b082e;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    border-bottom: 4px solid #a020f0;
+    text-align: left;
+}
+.input .text{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    color: #ddd;
+}
+.slider{
+    width: 100%;
+    margin-bottom: 1.2rem;
+    appearance: none;
+    height: 12px;
+    border-radius: 6px;
+    background: #2e1045;
+    background-image: linear-gradient(#ff00cc, #ff00cc);
+    background-repeat: no-repeat;
+    background-size: 50% 100%; 
+    outline: none;
+    border: 2px solid yellow;
+}
+.slider::-webkit-slider-thumb{
+    appearance: none;
+    width: 26px;
+    height: 26px;
+    background: yellow;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #fff;
+    transition: background 0.3s;
+}
+.slider::-webkit-slider-thumb:hover{
+    background: black;
+}
+.input div{
+    display: flex;
+    align-items: center;  
+    margin: 0.8rem 0;
+}
+.input div input[type="checkbox"]{
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #6a0dad;
+    border-radius: 5px;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+}
+.input div input[type="checkbox"]:checked{
+    background: #6a0dad;
+}
+.input div input[type="checkbox"]:checked::after{
+    content: "✔";
+    position: absolute;
+    left: 3px;
+    top: -2px;
+    font-size: 15px;
+    color: #fff;
+}
+.input div label{
+    margin-left: 0.9rem;
+    font-size: 1.05rem;
+    color: #ddd;
+    line-height: 1;  
+}
+.strength{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.6rem 0;
+    color: #ddd;
+}
+[data-indicator]{
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: gray;
+    box-shadow: 0 0 10px gray;
+    transition: all 0.3s ease;
+}
+.Button{
+    width: 100%;
+    padding: 1.1rem;
+    font-size: 1.15rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.7rem;
+    cursor: pointer;
+    background: linear-gradient(90deg, #a000ff, #ff00d4);
+    color: yellow;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.25s ease;
+    border-bottom: 4px solid yellow;
+}
+.Button:hover{
+    background: linear-gradient(90deg, #7a00c7, #cc00a7);
+    color: #fff;
+    border-bottom: 4px solid #ffeb3b;
+}
